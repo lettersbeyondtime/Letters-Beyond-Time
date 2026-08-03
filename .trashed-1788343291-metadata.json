@@ -1,0 +1,6 @@
+{
+  "name": "Letters Beyond Time",
+  "description": "An AI-powered community web application where people connect across different stages of life through anonymous letters, wisdom, and kindness.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

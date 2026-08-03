@@ -1,0 +1,93 @@
+{
+  "collections": [
+    {
+      "name": "letters",
+      "description": "Letters written by users to their younger selves or others.",
+      "securityRules": {
+        "read": "true",
+        "create": "true",
+        "update": "true",
+        "delete": "false"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "authorAge": {
+            "type": "number",
+            "description": "The age of the author when writing the letter"
+          },
+          "targetAge": {
+            "type": "string",
+            "description": "The target age the letter is addressed to"
+          },
+          "senderPerspective": {
+            "type": "string",
+            "description": "The perspective of the sender"
+          },
+          "feeling": {
+            "type": "string",
+            "description": "The feeling associated with the letter"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Topics covered in the letter"
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the letter"
+          },
+          "content": {
+            "type": "string",
+            "description": "Main content of the letter"
+          },
+          "lifeLesson": {
+            "type": "string",
+            "description": "Optional life lesson takeaway"
+          },
+          "isAI": {
+            "type": "boolean",
+            "description": "Whether the letter was AI-generated"
+          },
+          "createdAt": {
+            "type": "string",
+            "description": "Creation timestamp in ISO string format"
+          },
+          "reactions": {
+            "type": "map",
+            "properties": {
+              "neededThis": { "type": "number" },
+              "feltUnderstood": { "type": "number" },
+              "beautiful": { "type": "number" },
+              "hopeful": { "type": "number" },
+              "madeMeSmile": { "type": "number" }
+            },
+            "description": "Reaction counts for the letter"
+          },
+          "location": {
+            "type": "string",
+            "description": "Optional location of the author"
+          },
+          "waxSealColor": {
+            "type": "string",
+            "description": "Optional color for the wax seal"
+          }
+        },
+        "required": [
+          "authorAge",
+          "targetAge",
+          "senderPerspective",
+          "feeling",
+          "topics",
+          "title",
+          "content",
+          "isAI",
+          "createdAt",
+          "reactions"
+        ]
+      }
+    }
+  ]
+}
